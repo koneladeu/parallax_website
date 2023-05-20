@@ -1,0 +1,50 @@
+/* styles.css */
+
+body {
+    margin: 0;
+    justify-content: center;
+    align-items: center;
+}
+  
+    .parallax-container {
+    height: 100vh;
+    overflow: hidden;
+    position: relative;
+  }
+  
+  .parallax-layer {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+  }
+  
+  .layer1 {
+    background-image: url('images/kon\ jjk.jpeg');
+    /* Additional background properties */
+    background-size: cover;
+    z-index: 1;
+  }
+  
+  .layer2 {
+    background-image: url('images/Purple\ Aesthetic\ Rain.gif');
+    /* Additional background properties */
+    background-size: cover;
+    z-index: 2;
+  }
+  
+  .layer3 {
+    background-image: url('images/wind\ planet.gif');
+    /* Additional background properties */
+    background-size: cover;
+    z-index: 3;
+  }
+  
+  .layer4 {
+    background-image: url('images/Clouds.png');
+    /* Additional background properties */
+    background-size: cover;
+    z-index: 4;
+  }
+  

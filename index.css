@@ -1,50 +1,107 @@
-/* styles.css */
-
 body {
-    margin: 0;
-    justify-content: center;
-    align-items: center;
+  /* Metal by Etienne Martin. https://unsplash.com/photos/v6uiP2MD6vs */
+  --metal-tex: url(https://images.unsplash.com/photo-1501166222995-ff31c7e93cef?crop=entropy&cs=tinysrgb&fm=jpg&ixid=MnwzMjM4NDZ8MHwxfHJhbmRvbXx8fHx8fHx8fDE2NTcyMDc2NzU&ixlib=rb-1.2.1&q=80);
+  
+  background: black;
+  color: white;
+  font-family: system-ui, sans-serif;
+  
+}
+
+h2 {
+  font-size: 100px;
+  text-transform: uppercase;
+  font-family: 'Gambetta', serif;
+  letter-spacing: -3px;
+  transition: 700ms ease;
+  font-variation-settings: "wght" 311;
+  margin-bottom: 0.8rem;
+  color: PaleGoldenRod;
+  outline: none;
+  text-align: center;
+}
+
+h2:hover {
+  font-variation-settings: "wght" 582; 
+  letter-spacing: 1px;
+}
+
+p {
+  font-size: 1.2em;
+  line-height: 150%;
+  text-align: center;
+  color: MintCream;
+  letter-spacing: .5px;
+}
+
+ul {
+  font-size: 1.2em;
+  line-height: 150%;
+  text-align: center;
+  color: MintCream;
+  letter-spacing: .5px;
+}
+
+
+a {
+  color: skyblue;
+  font-weight: bold;
+}
+
+.main {
+  margin: 40px auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.metal {
+  position: relative;
+  margin: 15vh auto;
+  color: transparent;
+  font-family: impact, sans-serif;
+  font-size: 1000%;
+  letter-spacing: 0.05em;
+  background-image: var(--metal-tex);
+  background-size: cover;
+  background-clip: text;
+  -webkit-background-clip: text;
+}
+
+.texture,
+.texture::after {
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
 }
   
-    .parallax-container {
-    height: 100vh;
-    overflow: hidden;
-    position: relative;
-  }
-  
-  .parallax-layer {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-  }
-  
-  .layer1 {
-    background-image: url('images/kon\ jjk.jpeg');
-    /* Additional background properties */
-    background-size: cover;
-    z-index: 1;
-  }
-  
-  .layer2 {
-    background-image: url('images/Purple\ Aesthetic\ Rain.gif');
-    /* Additional background properties */
-    background-size: cover;
-    z-index: 2;
-  }
-  
-  .layer3 {
-    background-image: url('images/wind\ planet.gif');
-    /* Additional background properties */
-    background-size: cover;
-    z-index: 3;
-  }
-  
-  .layer4 {
-    background-image: url('images/Clouds.png');
-    /* Additional background properties */
-    background-size: cover;
-    z-index: 4;
-  }
-  
+.texture {
+  background-image: linear-gradient(to bottom, blue, white 50%, red 65%, white);
+  background-attachment: fixed;
+  mix-blend-mode: color-dodge;
+}
+
+.texture::after {
+  content: '';
+  background-image: var(--metal-tex);
+  background-size: cover;
+  filter: saturate(0) brightness(0.8) contrast(4);
+  mix-blend-mode: multiply;
+}
+
+.image {
+  /* The image used */
+  background-image: url("images/wind\ planet.gif");
+
+  /* Set a specific height */
+  min-height: 500px;
+
+  /* Create the parallax scrolling effect */
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
